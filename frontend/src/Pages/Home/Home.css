@@ -1,0 +1,82 @@
+.heroSection {
+  width: 100%;
+  height: 100vh;
+  margin-top: 0px;
+  /* padding: 0 5%; */
+  display: flex;
+}
+
+.heroLeft {
+  width: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroLeft h1 {
+  font-size: 4rem;
+  color: #333;
+}
+
+.heroRight {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroBg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* border-radius: 20px; */
+  background: url("../../assets/background.jpg") center center/cover no-repeat;
+  overflow: hidden;
+}
+
+.heroBg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.heroMainTitle {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+
+  /* Button behaviors */
+  cursor: pointer;
+  background: none; /* Ensures no background box */
+  border: none; /* Strictly no borders */
+  outline: none;
+
+  /* Smooth transition for the hover effect */
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Hover Effect */
+.heroMainTitle:hover {
+  color: #ccc; /* Fades the text slightly (change to your brand color) */
+  transform: translate(-50%, -50%) scale(1.05); /* Slightly grows the text without breaking alignment */
+}
+.categoryTItle {
+  margin: 20px 5% 0 5%;
+  text-align: center;
+  font-weight: 500;
+  font-size: 2rem;
+}
